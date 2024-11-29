@@ -1,7 +1,8 @@
-import FavoriteButton from "./components/favoriteButton/FavoriteButton";
+import React from "react";
+import RecipeItem from "./components/recipeItem/RecipeItem";
 
 export default function App (){
     return (
-        <FavoriteButton />
+        <RecipeItem />
     )
 }

@@ -12,13 +12,32 @@ code {
     monospace;
 }
 
+/* Favorite button */
+
 .favorite-button{
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
 }
 
+.favorite-button:hover{
+  background-color: #d0d0d0;
+}
+
 .favorite-button img{
+  width:100%;
+  height: auto;
+}
+
+/* Recipe item */
+.recipe-container{
+  width: 20%;
+  height: auto;
+  border: solid 2px black;
+  border-radius: 5px;
+}
+
+.recipe-image{
   width:100%;
   height: auto;
 }
