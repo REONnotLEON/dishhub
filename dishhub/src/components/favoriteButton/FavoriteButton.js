@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import HeartSolid from '../../assets/heart-solid.svg';
-import HeartRegular from '../../assets/heart-regular.svg';
+import HeartSolid from '../../assets/icons/heart-solid.svg';
+import HeartRegular from '../../assets/icons/heart-regular.svg';
 
 export default function FavoriteButton ({onClickHandler}){
 
@@ -15,7 +15,7 @@ export default function FavoriteButton ({onClickHandler}){
             <img
                 className="heart-icon" 
                 src={isFavorite ? HeartSolid : HeartRegular}
-                alt="favorite-icon"
+                alt="heart-icon"
             />
         </button>
     )

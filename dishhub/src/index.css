@@ -12,6 +12,50 @@ code {
     monospace;
 }
 
+/* Hamburger Menu */
+.hamburger-menu{
+  position: relative;
+}
+
+.hamburger-menu .hamburger-button{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%; 
+  padding: 0 0.5rem;
+}
+
+.hamburger-menu .hamburger-button:hover{
+  background-color: #d0d0d0;
+}
+
+.hamburger-menu .humburger-button .bars-icon{
+  width: 80%;
+  height: auto;
+}
+
+.hamburger-menu .menu{
+  position: fixed;
+  left: -100%;
+  width: 60%;
+  height: 100vh;
+  transition: left 1s ease;
+}
+
+.hamburger-menu .menu.visible{
+  background-color: gray;
+  left: 0;
+}
+
+.hamburger-menu .menu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul .username{
+  text-decoration: underline;
+}
+
 /* Favorite button */
 
 .favorite-button{
