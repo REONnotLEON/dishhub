@@ -1,17 +1,11 @@
 import React from "react";
 import RecipeItem from "./components/recipeItem/RecipeItem";
-import HamburgerMenu from "./components/hamburgerMenu/HamburgerMenu";
-import SearchBar from "./components/searchBar/SearchBar";
-import AuthButtons from "./components/authButtons/AuthButtons";
+import Header from "./components/header/Header";
 
 export default function App (){
     return (
         <>
-            <header>
-                <HamburgerMenu />
-                <SearchBar />
-                <AuthButtons />
-            </header>
+            <Header />
             <main>
                 <RecipeItem />
                 <RecipeItem />
