@@ -1,6 +1,7 @@
 import React from "react";
 import FavoriteButton from "../favoriteButton/FavoriteButton";
 import sampleImg from "../../assets/images/sample.jpg";
+import SaveButton from "../saveButton/SaveButton";
 
 export default function RecipeItem () {
     return (
@@ -12,6 +13,7 @@ export default function RecipeItem () {
             />
             <p>NAME</p>
             <FavoriteButton />
+            <SaveButton />
         </div>
     )
 }
