@@ -5,11 +5,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 5px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/*Header*/
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 15px;
 }
 
 /* Hamburger Menu */
@@ -20,10 +30,12 @@ code {
 .hamburger-menu .hamburger-button{
   position: relative;
   z-index: 10;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%; 
-  padding: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hamburger-menu .hamburger-button:hover{
@@ -64,33 +76,48 @@ code {
 /*Search Bar*/
 
 .search-container{
-  width: 60%;
-  height: 2rem;
+  flex: 1;
+  max-width: 700px;
+  height: 2.5rem;
   border: solid black 1px;
   border-radius: 10px;
-  padding-bottom: 5px;
-}
-
-.search-container hr{
-  width:80%;
-  margin-top: 0;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
 }
 
 .search-glass-icon{
- height: 50%;
- margin-left: 10%;
+ height: 1.2rem;
+ margin-right: 8px;
 }
 
 .search-input{
   border: none;
   outline: none;
+  flex: 1;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+/*auth buttons*/
+.auth-container{
+  width: 20%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.login-button, .signup-button{
+  font-size: 10px; 
+  border: solid black 1px;
+  border-radius: 5px;
 }
 
 /* Favorite button */
 
 .favorite-button{
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
 }
 
@@ -99,14 +126,14 @@ code {
 }
 
 .favorite-button img{
-  width:100%;
+  width: 100%;
   height: auto;
 }
 
 /* Save button */
 .save-button{
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%; 
 }
 
@@ -130,6 +157,15 @@ code {
 .recipe-image{
   width:100%;
   height: auto;
+}
+
+/*Recipe items */
+.recipe-items-container{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 /*Back button*/

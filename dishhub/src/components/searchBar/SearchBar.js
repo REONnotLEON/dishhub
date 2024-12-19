@@ -29,7 +29,6 @@ export default function SearchBar () {
                     name="search-input"
                     onChange={handleChange}
                 />
-                <hr/>
             </div>
         </form>
     )

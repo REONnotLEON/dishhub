@@ -5,16 +5,19 @@ import BackButton from "../components/backButton/BackButton";
 
 export default function Home(){
     return (
-        <>
+        <div className="home-page">
             <Header />
             <main>
                 <span>All Recipes: </span>
-                <RecipeItem />
-                <RecipeItem />
-                <RecipeItem />
-                <RecipeItem />
-                <BackButton />
+                <div className="recipe-items-container">
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                </div>
             </main>
-        </>
+        </div>
     )
 }
