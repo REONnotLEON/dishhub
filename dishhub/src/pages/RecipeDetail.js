@@ -8,7 +8,7 @@ import UserIcon from '../assets/icons/user-solid.svg';
 
 export default function RecipeDetail(){
     return(
-        <div>
+        <div className='recipe-detail-page'>
             <Header />
             <main>
                 <div className="recipe-detail-container">

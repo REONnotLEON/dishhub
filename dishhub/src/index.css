@@ -79,7 +79,7 @@ header{
   flex: 1;
   max-width: 700px;
   height: 2.5rem;
-  border: solid black 1px;
+  border: 1px solid black;
   border-radius: 10px;
   padding: 0 10px;
   display: flex;
@@ -109,7 +109,7 @@ header{
 
 .login-button, .signup-button{
   font-size: 10px; 
-  border: solid black 1px;
+  border: 1px solid black;
   border-radius: 5px;
 }
 
@@ -151,7 +151,7 @@ header{
 .user-icon{
   width: 2rem;
   height: 2rem;
-  border: solid black 1px;
+  border: 1px solid black;
   border-radius: 50%;
 
 }
@@ -160,7 +160,7 @@ header{
 .recipe-container{
   width: 40%;
   height: auto;
-  border: solid 2px black;
+  border: 2px solid black;
   border-radius: 5px;
 }
 
@@ -210,7 +210,7 @@ header{
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .recipe-overview .name-and-buttons{
@@ -234,4 +234,39 @@ header{
 
 .recipe-description{
   background-color: gray;
+  border-radius: 10px;
+}
+
+.auth-page .logo{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.auth-page .forms{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.auth-page .forms h2{
+  text-align: center;
+}
+
+.form-group input{
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 5psx;
+  font-size: 1rem;
+}
+
+.form-actions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-actions .link{
+  font-size: 0.9rem;
+  text-decoration: underline;
 }
