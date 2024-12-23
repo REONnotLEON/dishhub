@@ -1,7 +1,7 @@
 import React from 'react';
 import userIcon from '../../assets/icons/user-solid.svg';
 
-export default function AuthButtons(){
+export default function AccountIcon(){
     
     return (
         <div className="auth-container">

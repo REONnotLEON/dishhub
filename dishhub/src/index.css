@@ -189,12 +189,10 @@ header{
   gap: 1rem;
 }
 
-.recipe-image-detail{
-  background-color: gray;
-}
 
 .recipe-image-container{
-  border-radius: 8px;
+  background-color: gray;
+  border-radius: 10px;
 }
 
 .recipe-overview{
@@ -229,10 +227,60 @@ header{
   border-radius: 10px;
 }
 
+/*Author Profile page*/
+
+.author-overview{
+  background-color: gray;
+  border-radius: 10px;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.author-overview .name-and-likes{
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.author-overview .author-icon{
+  background-color: #fff;
+  width: 3rem;
+  height: 3rem;
+  padding: 10px;
+  margin-right: 1rem;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.author-overview .heart{
+  background-color: #fff;
+  width: 2rem;
+  height: 2rem;
+  padding: 10px;
+  margin-right: 1rem;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.author-overview .name span{
+  text-decoration: underline;
+  font-size: 3rem;
+}
+
+.author-overview .likes span{
+  text-decoration: underline;
+  font-size: 2rem;
+}
+
+/*Auth page*/
+
 .auth-page .logo{
   width: 60%;
   margin: 0 auto;
 }
+
 
 .auth-page .forms{
   display: flex;

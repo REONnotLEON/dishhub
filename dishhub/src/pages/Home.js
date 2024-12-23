@@ -7,7 +7,7 @@ export default function Home(){
         <div className="home-page">
             <Header />
             <main>
-                <span>All Recipes: </span>
+                <h2>All Recipes: </h2>
                 <div className="recipe-items-container">
                     <RecipeItem />
                     <RecipeItem />
