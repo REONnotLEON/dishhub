@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Bars from '../../assets/icons/bars-solid.svg';
+import logo from '../../assets/images/logo_tentative.png';
+import { Link } from  'react-router-dom';
 
 export default function HamburgerMenu(){
 
@@ -19,7 +21,13 @@ export default function HamburgerMenu(){
                 />
             </button>
             <div className={`menu ${isOpen ? "visible" : ""}`}>
-                {/* logo is here */}
+                    <Link to="/">
+                        <img    
+                            src={logo}
+                            alt="logo"
+                            className='logo'
+                        />
+                    </Link>                    
                 <nav>
                     <ul>
                         <li className="username">Username</li>

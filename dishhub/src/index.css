@@ -47,8 +47,12 @@ header{
   height: auto;
 }
 
+.hamburger-menu .logo{
+  width: 70%;
+  margin-left: 4rem;
+}
+
 .hamburger-menu .menu{
-  padding-top: 3rem;
   background-color: gray;
   position: fixed;
   top: 0;
@@ -150,7 +154,7 @@ header{
 
 /* Recipe item */
 .recipe-container{
-  width: 40%;
+  width: 100%;
   height: auto;
   border: 2px solid black;
   border-radius: 5px;
@@ -162,12 +166,22 @@ header{
 }
 
 /*Recipe items */
+
 .recipe-items-container{
-  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  margin-top: 10px;
+}
+
+.recipe-container{
+  width: 40%;
+}
+
+.recipe-container a{
+  color: #000;
+  text-decoration: none;
 }
 
 /*Back button*/
@@ -209,6 +223,7 @@ header{
 }
 
 .recipe-overview .recipe-name{
+  display: inline;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -221,6 +236,12 @@ header{
 .recipe-overview .user-info{
   display: flex;
 }
+
+
+.recipe-overview .user-info p{
+  display: inline-block;
+}
+
 
 .recipe-description{
   background-color: gray;
@@ -264,21 +285,25 @@ header{
   border-radius: 50%;
 }
 
-.author-overview .name span{
+.author-overview .name p{
   text-decoration: underline;
   font-size: 3rem;
 }
 
-.author-overview .likes span{
+.author-overview .likes p{
   text-decoration: underline;
   font-size: 2rem;
 }
 
 /*Auth page*/
 
-.auth-page .logo{
+.auth-page a{
   width: 60%;
   margin: 0 auto;
+}
+
+.auth-page .logo{
+  width: 100%;
 }
 
 
@@ -306,7 +331,8 @@ header{
   align-items: center;
 }
 
-.form-actions .link{
+.form-actions p{
+  color: #00f;
   font-size: 0.9rem;
   text-decoration: underline;
 }

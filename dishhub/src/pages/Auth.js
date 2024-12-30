@@ -1,9 +1,14 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo_tentative.png';
 
 export default function Auth(){
 
     const [haveAccount, setHaveAccount] = useState(false)
+
+    const toggleHaveAccount = () => {
+        setHaveAccount((prev) => !prev)
+    }
 
     const loginForm = (
         <div className='login-form forms'>
@@ -14,7 +19,7 @@ export default function Auth(){
                     <input type="password" placeholder="password" />
                 </div>
                 <div className='form-actions'>
-                    <a href="#" className='link'>Sign up</a>
+                    <p onClick={toggleHaveAccount}>Sign up</p>
                     <input type="submit" />
                 </div>
             </form>
@@ -32,7 +37,7 @@ export default function Auth(){
                     <input type='password' placeholder='confirm password' />
                 </div>
                 <div className='form-actions'>
-                    <a href="#" className='link'>Log in</a>
+                    <p onClick={toggleHaveAccount}>Log in</p>
                     <input type="submit" />
                 </div>
             </form>
@@ -42,11 +47,13 @@ export default function Auth(){
     return (
         <div className='auth-page'>
             <header>
-              <img
-                src={logo}
-                className="logo"
-                alt="logo"
+              <Link to='/'>
+                <img
+                    src={logo}
+                    className="logo"
+                    alt="logo"
                 />
+                </Link>
             </header>
             <main>
                 {haveAccount ? loginForm : signupForm}

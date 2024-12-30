@@ -5,11 +5,11 @@ import FavoriteButton from '../components/favoriteButton/FavoriteButton';
 import SaveButton from '../components/saveButton/SaveButton';
 import SampleImg from '../assets/images/sample.jpg';
 import UserIcon from '../assets/icons/user-solid.svg';
+import { Link } from 'react-router-dom';
 
 export default function RecipeDetail(){
     return(
         <div className='recipe-detail-page'>
-            <Header />
             <main>
                 <div className="recipe-detail-container">
                     <div className="recipe-image-container">
@@ -28,11 +28,15 @@ export default function RecipeDetail(){
                             </div>
                         </div>
                         <div className='user-info'>
+                            <Link
+                                to="/author-profile"
+                            >
                                 <img
                                     src={UserIcon}
                                     className="user-icon"
                                 />
                                 <span>username</span>
+                            </Link>
                        </div>
                     </div>
                     <div className="recipe-description">

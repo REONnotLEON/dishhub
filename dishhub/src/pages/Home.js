@@ -5,7 +5,6 @@ import Header from "../components/header/Header";
 export default function Home(){
     return (
         <div className="home-page">
-            <Header />
             <main>
                 <h2>All Recipes: </h2>
                 <div className="recipe-items-container">

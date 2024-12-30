@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/header/Header";
 import RecipeItem from "../components/recipeItem/RecipeItem";
 import BackButton from "../components/backButton/BackButton";
 import userIcon from "../assets/icons/user-solid.svg";
@@ -8,7 +7,6 @@ import heart from "../assets/icons/heart-solid.svg";
 export default function AuthorProfile(){
     return (
         <div className="author-profile-page">
-            <Header />
             <main>
                 <div className="author-overview">
                     <div className="name-and-likes name">
@@ -17,7 +15,7 @@ export default function AuthorProfile(){
                             alt="author icon"
                             className="author-icon"
                         />
-                        <span>NAME</span>
+                        <p>NAME</p>
                     </div>
                     <div className="name-and-likes likes">
                         <img
@@ -25,7 +23,7 @@ export default function AuthorProfile(){
                             alt="favorite"
                             className="heart"
                         />
-                        <span>1,234</span>
+                        <p>1,234</p>
                     </div>
                 </div>
                 <h2>Posts: </h2>

@@ -1,20 +1,24 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { useSearchParams } from 'react-router-dom';
 import SearchGlass from '../../assets/icons/magnifying-glass-solid.svg';
 
 export default function SearchBar () {
 
-    const [query, setQuery] = useState('');
+    // const [searchParams, setSearchParams] = useSearchParams()
 
-    const handleChange = (e) => {
-        setQuery(e.target.value);
-    }
+    // const recipe= searchParams.get("");
 
-    const handleSearch = (e) => {
-        e.preventDefault();
-    }
+
+    // const handleChange = (e) => {
+    //     setSearchParams(e.target.value);
+    // }
+
+    // const handleSearch = (e) => {
+    //     e.preventDefault();
+    // }
 
     return (
-        <form className="search-bar" onSubmit={handleSearch}>
+        <form className="search-bar" /*onSubmit={handleSearch}*/>
             <div className="search-container">
                 <img
                     src={SearchGlass}
@@ -25,9 +29,9 @@ export default function SearchBar () {
                     type="text"
                     className="search-input"
                     placeholder="Search Recipe"
-                    value={query}
+                    // value={searchParams}
                     name="search-input"
-                    onChange={handleChange}
+                    // onChange={handleChange}
                 />
             </div>
         </form>
