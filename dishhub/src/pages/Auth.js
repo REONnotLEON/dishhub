@@ -20,7 +20,7 @@ export default function Auth(){
                 </div>
                 <div className='form-actions'>
                     <p onClick={toggleHaveAccount}>Sign up</p>
-                    <input type="submit" />
+                    <input className='submit' type="submit" />
                 </div>
             </form>
         </div>
@@ -38,7 +38,7 @@ export default function Auth(){
                 </div>
                 <div className='form-actions'>
                     <p onClick={toggleHaveAccount}>Log in</p>
-                    <input type="submit" />
+                    <input className='submit' type="submit" />
                 </div>
             </form>
         </div>

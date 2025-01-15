@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,20 +10,37 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 5px;
+  color: hsl(0, 0%, 10%);
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+main{
+  padding-top: 60px;
+}
+
 /*Header*/
 header{
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0;
-  margin-bottom: 15px;
+  z-index: 9;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 5px 5px;
+}
+
+
+header .logo-header{
+  display: none;
 }
 
 /* Hamburger Menu */
@@ -30,8 +51,8 @@ header{
 .hamburger-menu .hamburger-button{
   position: relative;
   z-index: 10;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%; 
   display: flex;
   justify-content: center;
@@ -47,6 +68,10 @@ header{
   height: auto;
 }
 
+.hamburger-menu .menu-shortcut{
+  display: none;
+}
+
 .hamburger-menu .logo{
   width: 70%;
   margin-left: 4rem;
@@ -59,8 +84,9 @@ header{
   left: -100%;
   z-index: 1;
   width: 60%;
-  height: 100vh;
-  transition: left 1s ease;
+  height: 100%;
+  transition: left 500ms ease;
+  border-right: 3px dotted black;
 }
 
 .hamburger-menu .menu.visible{
@@ -69,8 +95,38 @@ header{
 
 .hamburger-menu .menu ul{
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin-top: 2rem;
+  padding: 5px;
+}
+
+.menu ul li{
+  margin-bottom: 20px;
+  display:flex;
+  align-items: center;
+}
+
+.menu ul .icon{
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-right: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul .icon img{
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+}
+
+.menu ul .small{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
 }
 
 .menu ul .username{
@@ -81,13 +137,14 @@ header{
 
 .search-container{
   flex: 1;
-  max-width: 700px;
+  max-width: 500px;
   height: 2.5rem;
   border: 1px solid black;
   border-radius: 10px;
   padding: 0 10px;
   display: flex;
   align-items: center;
+  background-color: white;
 }
 
 .search-glass-icon{
@@ -100,7 +157,7 @@ header{
   outline: none;
   flex: 1;
   text-decoration: underline;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /*auth buttons*/
@@ -145,8 +202,8 @@ header{
 /*UserIcon*/
 
 .user-icon{
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border: 1px solid black;
   border-radius: 50%;
 
@@ -154,15 +211,24 @@ header{
 
 /* Recipe item */
 .recipe-container{
-  width: 100%;
+  width: 45%;
   height: auto;
   border: 2px solid black;
   border-radius: 5px;
+  background-color: white;
+  position: relative;
 }
 
 .recipe-image{
   width:100%;
   height: auto;
+  overflow: hidden;
+}
+
+.recipe-container .buttons{
+  position: absolute;
+  right: 0;
+  top: 65%;
 }
 
 /*Recipe items */
@@ -171,12 +237,6 @@ header{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.recipe-container{
-  width: 40%;
 }
 
 .recipe-container a{
@@ -191,9 +251,10 @@ header{
   bottom: 3%;
   padding: 8px 16px;
   font-size: 16px;
-  color: black;
-  border: 2px solid black;
+  color: white;
+  border: 2px solid white;
   border-radius: 20px;
+  background-color: gray;
 }
 
 /* Recipe Detail*/
@@ -269,20 +330,17 @@ header{
   background-color: #fff;
   width: 3rem;
   height: 3rem;
-  padding: 10px;
+  padding: 2px;
   margin-right: 1rem;
   border: 1px solid black;
   border-radius: 50%;
 }
 
 .author-overview .heart{
-  background-color: #fff;
   width: 2rem;
   height: 2rem;
-  padding: 10px;
+  padding: 2px;
   margin-right: 1rem;
-  border: 1px solid black;
-  border-radius: 50%;
 }
 
 .author-overview .name p{
@@ -323,6 +381,7 @@ header{
   border: 1px solid black;
   border-radius: 5psx;
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .form-actions{
@@ -335,4 +394,80 @@ header{
   color: #00f;
   font-size: 0.9rem;
   text-decoration: underline;
+}
+
+.form-actions .submit{
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: gray;
+  width: 5rem;
+  height: 2rem;
+}
+
+@media (min-width: 768px){
+
+  header .logo-header{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 4rem;
+    width: 10rem;
+  }
+
+  /*hamburger*/
+
+  .hamburger-menu .menu-shortcut{
+    display: block;
+    background-color: gray;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+
+  .menu-shortcut ul{
+    list-style: none;
+    padding: 5rem 0 0 0;
+  }
+
+  .hamburger-menu .menu-shortcut .icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 0.25rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburger-menu .menu-shortcut .icon img{
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+  }
+
+  .hamburger-menu .menu-shortcut li{
+    margin-bottom: 20px;
+  }
+
+  .hamburger-menu .menu-shortcut .small{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .hamburger-menu .menu{
+    width: 15rem;
+  }
+
+  main{
+    padding-left: 5rem;
+  }
+
+  /*Recipe items*/
+  .recipe-container{
+    width: 11rem;
+  }
+
 }

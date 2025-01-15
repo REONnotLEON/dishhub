@@ -14,6 +14,18 @@ export default function Home(){
                     <RecipeItem />
                     <RecipeItem />
                     <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
+                    <RecipeItem />
                 </div>
             </main>
         </div>

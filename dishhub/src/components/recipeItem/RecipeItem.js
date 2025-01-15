@@ -15,8 +15,10 @@ export default function RecipeItem () {
                     />
                     <p>NAME</p>
                 </Link>
-                <FavoriteButton />
-                <SaveButton />
+                <div className="buttons">
+                    <FavoriteButton />
+                    <SaveButton />
+                </div>
             </div>
     )
 }
